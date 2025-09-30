@@ -1,0 +1,31 @@
+{
+  "name": "moco/webman-api-sign",
+  "type": "library",
+  "license": "MIT",
+  "description": "适用于webman的api签名",
+  "keywords": [
+    "webman",
+    "api",
+    "sign"
+  ],
+  "require": {
+    "webman/think-cache": "^2.1",
+    "webman/think-orm": "^2.1",
+    "phpseclib/phpseclib": "~3.0",
+    "psr/container": "^2.0"
+  },
+  "require-dev": {
+    "workerman/webman": "^2.1"
+  },
+  "autoload": {
+    "psr-4": {
+      "Wengg\\WebmanApiSign\\": "src"
+    }
+  },
+  "authors": [
+    {
+      "name": "moco",
+      "email": "2530660700@qq.com"
+    }
+  ]
+}
