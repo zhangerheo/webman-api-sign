@@ -1,5 +1,5 @@
 {
-  "name": "moco/webman-api-sign",
+  "name": "yuanyuanli/webman-api-sign",
   "type": "library",
   "license": "MIT",
   "description": "适用于webman的api签名",
@@ -24,8 +24,8 @@
   },
   "authors": [
     {
-      "name": "moco",
-      "email": "2530660700@qq.com"
+      "name": "yuanyuanli",
+      "email": "275008147@qq.com"
     }
   ]
 }
