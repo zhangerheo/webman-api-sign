@@ -70,7 +70,7 @@ class ApiSignMiddleware implements MiddlewareInterface
 
 
             if(empty($request->file())) {
-                Log::info('$rawData:' . $rawData);
+               // Log::info('$rawData:' . $rawData);
             }
             if ($app_info['encrypt_body'] && !empty($key) && !empty($rawData)) {
                 $raw = json_decode($rawData, true);
@@ -80,7 +80,7 @@ class ApiSignMiddleware implements MiddlewareInterface
 
                     $aes = new AES($key);
                     $postData = $aes->decrypt($raw);
-                    Log::info('$postData：'.$postData);
+                   // Log::info('$postData：'.$postData);
 
                     $postData = \json_decode($postData, true);
                     if (is_array($postData)) {
@@ -96,7 +96,7 @@ class ApiSignMiddleware implements MiddlewareInterface
             $data = array_merge($postData ?? $request->post(), $request->get(), $data);
             unset($data['data']);//删除加密数据
 
-            Log::info('$data：'.json_encode($data));
+           // Log::info('$data：'.json_encode($data));
             try {
                 $service->check($data, $key);
             } catch (ApiSignException $e) {

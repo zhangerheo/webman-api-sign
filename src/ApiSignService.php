@@ -92,9 +92,9 @@ class ApiSignService
         $str = urldecode(http_build_query($data)) . $key;
         $str = mb_convert_encoding($str, 'UTF-8', 'auto');
 //        echo 'sign:'.$str;
-        Log::error( 'sign_str:'.$str);
+       // Log::error( 'sign_str:'.$str);
         $signature = hash($encrypt, $str);
-        Log::error( 'signature:'.$signature);
+        //Log::error( 'signature:'.$signature);
 
         return $signature;
     }
