@@ -38,8 +38,9 @@ class ApiSignMiddleware implements MiddlewareInterface
                 'nonce' => $request->header('nonce', $request->input('nonce')),
                 'signature' => $request->header('signature', $request->input('signature')),
             ];
-            log::info('header:'.json_encode($data));
+          
             if (empty($data['app-id']) || empty($data['timestamp']) || strlen($data['nonce']) != 10 || empty($data['nonce']) || empty($data['signature'])) { //|| empty($data[$fields['app_key']])
+                  Log::error('header:'.json_encode($data));
                 throw new BadRequestHttpException("参数错误");
             }
 
